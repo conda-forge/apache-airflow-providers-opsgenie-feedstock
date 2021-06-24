@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-opsgenie" %}
-{% set version = "1.0.2" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
-  sha256: 5a1c4c7ca9dab073ba050a2dcf7c7f62e294d8352798cee4e9071f62575e6dc1
+  sha256: e2f64a6749b777996fbed52d62c5f3986d6fa20693f9d26386aa161f72924182
 
 build:
   number: 0
@@ -17,13 +17,14 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.6
+    - pip
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
     - python >=3.6
+    - apache-airflow >=2.1.0
+    - apache-airflow-providers-http
 
 test:
   imports:
