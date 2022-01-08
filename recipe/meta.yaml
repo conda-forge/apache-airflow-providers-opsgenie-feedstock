@@ -17,14 +17,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
-    - wheel
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
-    - apache-airflow-providers-http
+    - opsgenie-sdk >=2.1.5
 
 test:
   imports:
