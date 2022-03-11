@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-opsgenie" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
-  sha256: 3d34a4f61b75ca8ad18091f812e4691802fc76dee5445ef2a1399e3d666a4da3
+  sha256: 92bd94033ad00950cf833c5eed30cfc8fccaff0de2bd5e644a90cbe70bfbc4c3
 
 build:
   number: 0
