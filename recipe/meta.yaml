@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-opsgenie" %}
-{% set version = "5.2.0" %}
+{% set version = "5.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-opsgenie-{{ version }}.tar.gz
-  sha256: d91b03f10414fb9dfaf3ea00af58b7ef29875e2e404b8147db356f1b49aa8223
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 2262c6a6e243b4482647f3443fe6763b99e05573a3cd0e6bc2933e1403a841ef
 
 build:
   noarch: python
