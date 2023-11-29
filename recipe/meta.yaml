@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_opsgenie-{{ version }}.tar.gz
   sha256: 2262c6a6e243b4482647f3443fe6763b99e05573a3cd0e6bc2933e1403a841ef
 
 build:
@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
@@ -26,8 +26,7 @@ requirements:
 
 test:
   imports:
-    - airflow.providers.opsgenie
-    - airflow.providers.opsgenie.hooks
+    - apache_airflow_providers_opsgenie
   commands:
     - pip check
   requires:
@@ -35,11 +34,9 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-opsgenie package
+  summary: Provider package apache-airflow-providers-opsgenie for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/opsgenie/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-opsgenie/stable/index.html
   dev_url: https://github.com/apache/airflow/
