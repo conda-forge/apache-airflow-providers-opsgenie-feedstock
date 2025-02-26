@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-opsgenie" %}
-{% set version = "5.8.0" %}
+{% set version = "5.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_opsgenie-{{ version }}.tar.gz
-  sha256: 59dacca714cd20a61423cadc6a36737fd6aededbefb6fb526f13effb939e8efb
+  sha256: 423b8e9386ade7c13f853a4d5112464e79bc8d28a9358a8d8520e6993d5aecd2
 
 build:
   noarch: python
