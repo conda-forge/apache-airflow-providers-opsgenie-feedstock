@@ -37,8 +37,8 @@ about:
   home: https://airflow.apache.org/
   summary: Provider package apache-airflow-providers-opsgenie for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/opsgenie/LICENSE
   license_family: Apache
+  license_file: src/airflow/providers/opsgenie/LICENSE
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-opsgenie/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
