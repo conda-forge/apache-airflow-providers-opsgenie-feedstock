@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-opsgenie" %}
-{% set version = "5.8.2" %}
+{% set version = "5.8.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_opsgenie-{{ version }}.tar.gz
-  sha256: 234c5777dbf74d642538bfac3f98bfa8b94c34362ade8d06b1cb4b48bad4e61e
+  sha256: 276b5b6bf987172d02395d9e9a3a335078c3c7f7e678cc9cb23871c4b871c99c
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - flit-core ==3.11.0
     - pip
   run:
+    - apache-airflow-providers-common-compat >=1.6.0
     - python >={{ python_min }},<4.dev0
     - apache-airflow >=2.9.0
     - opsgenie-sdk >=2.1.5
