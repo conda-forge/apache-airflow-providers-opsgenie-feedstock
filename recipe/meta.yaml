@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-opsgenie" %}
-{% set version = "5.9.2" %}
-{% set python_min = "3.10" %}
+{% set version = "5.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_opsgenie-{{ version }}.tar.gz
-  sha256: f6f96b57e41cd39495f00a062590a0b83858b8d00c6af75af8c6e8960e4487fe
+  sha256: c74f6d1693dfc58427e3b39c4df21be3ae2b9cc5a8223b8dbea20b529b1ed8e0
 
 build:
   noarch: python
@@ -23,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
-    - apache-airflow-providers-common-compat >=1.6.1
+    - apache-airflow-providers-common-compat >=1.8.0
     - opsgenie-sdk >=2.1.5
 
 test:
@@ -36,11 +35,13 @@ test:
     - pip
 
 about:
-  home: https://airflow.apache.org/
+  home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-opsgenie for Apache Airflow
   license: Apache-2.0
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
-  license_file: src/airflow/providers/opsgenie/LICENSE
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-opsgenie/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
