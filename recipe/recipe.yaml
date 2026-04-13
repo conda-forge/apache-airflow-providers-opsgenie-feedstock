@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-opsgenie
-  version: "5.10.2"
+  version: "5.10.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_opsgenie-${{ version }}.tar.gz
-  sha256: ca052348f34112eae89ad25d51d73971db288bff9b10950d73a666fdb8978613
+  sha256: 9500a8501550536d28f4d113e00aa207a16086fb0508174f704612b1daccc5db
 
 build:
   noarch: python
@@ -31,7 +31,9 @@ tests:
       imports:
         - airflow.providers.opsgenie
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
