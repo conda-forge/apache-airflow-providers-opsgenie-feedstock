@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-opsgenie
-  version: "5.10.3"
+  version: "5.10.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_opsgenie-${{ version }}.tar.gz
-  sha256: 9500a8501550536d28f4d113e00aa207a16086fb0508174f704612b1daccc5db
+  sha256: 2a45050abfbc470a148e08a91806077a7f704b0adf9d530c1ad64a66c8fe73ac
 
 build:
   noarch: python
